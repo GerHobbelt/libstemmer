@@ -1,4 +1,11 @@
 libstemmer_c
+
+Source: https://snowballstem.org/download.html
+Version: 2.1.0
+
+Original README:
+
+libstemmer_c
 ============
 
 This document pertains to the C version of the libstemmer distribution,

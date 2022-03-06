@@ -1,10 +1,18 @@
 libstemmer_c
+
+Source: https://snowballstem.org/download.html
+Version: 2.1.0
+
+Original README:
+
+libstemmer_c
 ============
 
 This document pertains to the C version of the libstemmer distribution,
 available for download from:
 
-http://snowball.tartarus.org/dist/libstemmer_c.tgz
+- https://snowballstem.org/download.html
+- (Old) http://snowball.tartarus.org/dist/libstemmer_c.tgz
 
 
 Compiling the library
@@ -95,8 +103,9 @@ Using the library in a system using GNU autotools
 The libstemmer_c library can be integrated into a larger system which uses the
 GNU autotool framework (and in particular, automake and autoconf) as follows:
 
-1) Unpack libstemmer_c.tgz in the top level project directory so that there is
-   a libstemmer_c subdirectory of the top level directory of the project.
+1) Unpack libstemmer_c-*.tar.gz in the top level project directory and rename
+   the resulting directory to remove the version number so that there is a
+   libstemmer_c subdirectory of the top level directory of the project.
 
 2) Add a file "Makefile.am" to the unpacked libstemmer_c folder, containing:
    

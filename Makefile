@@ -5,7 +5,8 @@ ifeq ($(OS),Windows_NT)
 else
 	RM = rm -f
 endif
-CFLAGS=-Iinclude -fPIC $(ARCHFLAGS)
+CFLAGS=-O2
+CPPFLAGS=-Iinclude -fPIC $(ARCHFLAGS)
 
 all: libstemmer.o stemwords
 
@@ -13,9 +14,9 @@ libstemmer.o: $(snowball_sources:.c=.o)
 	$(AR) -cru $@ $^
 
 stemwords: examples/stemwords.o libstemmer.o
-	$(CC) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) stemwords *.o src_c/*.o runtime/*.o libstemmer/*.o examples/*.o
+	$(RM) stemwords *.o src_c/*.o examples/*.o runtime/*.o libstemmer/*.o
 
 .PHONY: all

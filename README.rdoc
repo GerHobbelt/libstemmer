@@ -1,6 +1,10 @@
-= Ruby-Stemmer {Project Status}[http://stillmaintained.com/aurelian/ruby-stemmer.png]
+= Ruby-Stemmer
 
 Ruby-Stemmer exposes SnowBall API to Ruby.
+
+{Project Status}[http://stillmaintained.com/aurelian/ruby-stemmer.png]
+
+{Travis CI Status}[https://api.travis-ci.org/aurelian/ruby-stemmer.png]
 
 This package includes libstemmer_c library released under BSD licence 
 and available for free {here}[http://snowball.tartarus.org/dist/libstemmer_c.tgz].
@@ -50,7 +54,7 @@ For more details about libstemmer_c please visit the {SnowBall website}[http://s
 
 ==== Windows
 
-There's also a Windows (Fat bin) compiled against ruby 1.9.3 and ruby 1.8.7.
+There's also a Windows (Fat bin) compiled against ruby versions: 1.8.7, 1.9.3, 2.1.5, 2.2.0
 
  gem install ruby-stemmer --platform=x86-mingw32
 
@@ -67,6 +71,16 @@ As far as I know the above should work with {rubyinstaller}[http://rubyinstaller
   $ rake -T #<== see what we've got
   $ rake compile #<== builds the extension do'h
   $ rake test
+
+==== Cross Compiling
+
+Install {rake-compiler-dev-box}[https://github.com/tjschuck/rake-compiler-dev-box] and follow the setup.
+Inside vagrant box run:
+
+  $ cd /vagrant
+  $ RUBY_CC_VERSION=1.8.7:1.9.3:2.1.5:2.2.0 package_win32_fat_binary ruby-stemmer
+
+Idea is to have same builds as in travis.yml.
 
 == NOT A BUG
 
@@ -102,7 +116,7 @@ For further reference on stem vs. root, please check wikipedia articles on the t
 
 == Copyright
 
-Copyright (c) 2008-2011 {Aurelian Oancea}[http://locknet.ro]. See MIT-LICENSE for details.
+Copyright (c) 2008-2015 {Aurelian Oancea}[http://locknet.ro]. See MIT-LICENSE for details.
 
 == Contributors
 

@@ -5,7 +5,7 @@ ifeq ($(OS),Windows_NT)
 else
 	RM = rm -f
 endif
-CFLAGS=-Iinclude -fPIC
+CFLAGS=-Iinclude -fPIC $(ARCHFLAGS)
 
 all: libstemmer.o stemwords
 

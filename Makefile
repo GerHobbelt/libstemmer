@@ -16,4 +16,6 @@ stemwords: examples/stemwords.o libstemmer.o
 	$(CC) -o $@ $^
 
 clean:
-	$(RM) *.o src_c/*.o runtime/*.o libstemmer/*.o examples/*.o
+	$(RM) stemwords *.o src_c/*.o runtime/*.o libstemmer/*.o examples/*.o
+
+.PHONY: all

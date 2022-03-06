@@ -1,0 +1,9 @@
+pkg/*
+*.o
+*.so
+Makefile
+mkmf.log
+*.swp
+*.bundle
+.idea/*
+stemmer.bundle

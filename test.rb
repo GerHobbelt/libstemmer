@@ -1,16 +1,9 @@
 #!/usr/bin/env ruby
-
-#
-# $Id: test.rb 21 2008-04-30 10:57:37Z aurelian $
-#
-
-$kcode = "utf-8"
+# coding:utf-8
 
 require "stemmer.so"
 
-#puts "installation".stem
-
-# puts ">>> test 1."
+puts ">>> test 1."
 stemmer = Lingua::Stemmer.new()
 puts stemmer.stem("installation")
 puts stemmer.length
@@ -31,3 +24,11 @@ puts stemmer.stem("personalities")
 puts ">>> test 5."
 stemmer = Lingua::Stemmer.new(:encoding => 'UTF_8', :language => 'ro')
 puts stemmer.stem("întrebător");
+
+puts ">>> test 6."
+stemmer = Lingua::Stemmer.new(:encoding => 'UTF_8', :language => 'ro')
+puts stemmer.stem(["one", "two"]);
+
+puts ">>> test 7."
+stemmer = Lingua::Stemmer.new(:encoding => 'UTF_8', :language => 'ro')
+puts stemmer.stem(nil);

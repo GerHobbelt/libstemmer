@@ -1,4 +1,7 @@
 rdoc
+*.gemspec
+tmp
+libstemmer_c/stemwords
 pkg/*
 *.o
 *.so

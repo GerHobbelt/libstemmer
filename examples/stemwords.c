@@ -9,7 +9,7 @@
 
 #include "libstemmer.h"
 
-const char * progname;
+static const char * progname;
 static int pretty = 1;
 
 static void

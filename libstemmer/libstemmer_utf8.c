@@ -1,3 +1,5 @@
+// copy of libstemmer.c + modules.h, which is UTF8 *only*, i.e. DOES NOT include
+// any ENC_ISO_8859_1, ENC_ISO_8859_2, ENC_KOI8_R encodings.
 
 #include <stdlib.h>
 #include <string.h>

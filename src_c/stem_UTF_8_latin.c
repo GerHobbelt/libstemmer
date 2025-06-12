@@ -437,7 +437,7 @@ lab0:
     return 1;
 }
 
-extern struct SN_env * latin_UTF_8_create_env(void) { return SN_create_env(2, 0, 0); }
+extern struct SN_env * latin_UTF_8_create_env(void) { return SN_create_env(2, 0); }
 
 extern void latin_UTF_8_close_env(struct SN_env * z) { SN_close_env(z, 2); }
 
